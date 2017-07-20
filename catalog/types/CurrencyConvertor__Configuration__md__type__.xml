@@ -1,0 +1,58 @@
+<metadata__catalog__entry>
+  <version>5.2.0.0</version>
+  <types class="tree-map">
+    <entry>
+      <org.mule.common.metadata.DefaultMetaDataKey>
+        <id>CurrencyConvertor_CurrencyConvertorHttpGet||ConversionRate</id>
+        <displayName>CurrencyConvertor.asmx (CurrencyConvertorHttpGet)||ConversionRate</displayName>
+        <category>DEFAULT</category>
+        <metaDataKeyPropertiesManager>
+          <properties>
+            <org.mule.common.metadata.key.property.dsql.DsqlFromMetaDataKeyProperty/>
+          </properties>
+        </metaDataKeyPropertiesManager>
+      </org.mule.common.metadata.DefaultMetaDataKey>
+      <null/>
+    </entry>
+    <entry>
+      <org.mule.common.metadata.DefaultMetaDataKey>
+        <id>CurrencyConvertor_CurrencyConvertorHttpPost||ConversionRate</id>
+        <displayName>CurrencyConvertor.asmx (CurrencyConvertorHttpPost)||ConversionRate</displayName>
+        <category>DEFAULT</category>
+        <metaDataKeyPropertiesManager>
+          <properties>
+            <org.mule.common.metadata.key.property.dsql.DsqlFromMetaDataKeyProperty/>
+          </properties>
+        </metaDataKeyPropertiesManager>
+      </org.mule.common.metadata.DefaultMetaDataKey>
+      <null/>
+    </entry>
+    <entry>
+      <org.mule.common.metadata.DefaultMetaDataKey>
+        <id>CurrencyConvertor_CurrencyConvertorSoap12||ConversionRate</id>
+        <displayName>CurrencyConvertor.asmx (CurrencyConvertorSoap12)||ConversionRate</displayName>
+        <category>DEFAULT</category>
+        <metaDataKeyPropertiesManager>
+          <properties>
+            <org.mule.common.metadata.key.property.dsql.DsqlFromMetaDataKeyProperty/>
+          </properties>
+        </metaDataKeyPropertiesManager>
+      </org.mule.common.metadata.DefaultMetaDataKey>
+      <null/>
+    </entry>
+    <entry>
+      <org.mule.common.metadata.DefaultMetaDataKey>
+        <id>CurrencyConvertor_CurrencyConvertorSoap||ConversionRate</id>
+        <displayName>CurrencyConvertor.asmx (CurrencyConvertorSoap)||ConversionRate</displayName>
+        <category>DEFAULT</category>
+        <metaDataKeyPropertiesManager>
+          <properties>
+            <org.mule.common.metadata.key.property.dsql.DsqlFromMetaDataKeyProperty/>
+          </properties>
+        </metaDataKeyPropertiesManager>
+      </org.mule.common.metadata.DefaultMetaDataKey>
+      <null/>
+    </entry>
+  </types>
+  <connectorName>CurrencyConvertor__Configuration</connectorName>
+</metadata__catalog__entry>

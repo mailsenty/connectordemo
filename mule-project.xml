@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mule-project xmlns="http://www.mulesoft.com/tooling/project" runtimeId="org.mule.tooling.server.3.8.3.ee" schemaVersion="5.3.0.0">
+    <name>conectordemo</name>
+    <description></description>
+    <muleExtension name="IndianRailway" qualifier="org.mule.tooling.ui.contribution.indian-railway.3.5.0"/>
+    <muleExtension name="EmailValidator" qualifier="org.mule.tooling.ui.contribution.email-validator.3.5.0"/>
+    <muleExtension name="TimeZone" qualifier="org.mule.tooling.ui.contribution.time-zone.3.5.0"/>
+    <muleExtension name="CurrencyConvertor" qualifier="org.mule.tooling.ui.contribution.currency-convertor.3.7.0"/>
+    <muleExtension name="CurrencyConv" qualifier="org.mule.tooling.ui.contribution.currency-conv.3.5.0"/>
+    <muleExtension name="CurrencyConvertor" qualifier="org.mule.tooling.ui.contribution.currency-convertor.3.5.0"/>
+    <muleExtension name="CurrConv" qualifier="org.mule.tooling.ui.contribution.curr-conv.3.5.0"/>
+</mule-project>

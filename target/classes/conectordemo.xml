@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:time-zone="http://www.mulesoft.org/schema/mule/time-zone" xmlns:email-validator="http://www.mulesoft.org/schema/mule/email-validator" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:currency-convertor="http://www.mulesoft.org/schema/mule/currency-convertor" xmlns:indian-railway="http://www.mulesoft.org/schema/mule/indian-railway" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/indian-railway http://www.mulesoft.org/schema/mule/indian-railway/current/mule-indian-railway.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/email-validator http://www.mulesoft.org/schema/mule/email-validator/current/mule-email-validator.xsd
+http://www.mulesoft.org/schema/mule/time-zone http://www.mulesoft.org/schema/mule/time-zone/current/mule-time-zone.xsd">
+    <indian-railway:config name="IndianRailway__Configuration" doc:name="IndianRailway: Configuration"/>
+    <http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration"/>
+    <email-validator:config name="EmailValidator__Configuration" doc:name="EmailValidator: Configuration"/>
+    <time-zone:config name="TimeZone__Configuration" doc:name="TimeZone: Configuration"/>
+    <flow name="railconnectorstationinfodemoFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/railstation" allowedMethods="GET" doc:name="HTTP"/>
+        <indian-railway:find-station config-ref="IndianRailway__Configuration" station="#[message.inboundProperties.'http.query.params'.station]" doc:name="IndianRailway"/>
+    </flow>
+    <flow name="railconnectorpnrstatusdemoFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/railpnrstatus" allowedMethods="GET" doc:name="HTTP"/>
+        <indian-railway:check-p-n-r-status config-ref="IndianRailway__Configuration"  doc:name="IndianRailway" PNR="#[message.inboundProperties.'http.query.params'.pnr]"/>
+    </flow>
+    <flow name="emailvalidatorconectordemoFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/emailvalidator" doc:name="HTTP" allowedMethods="GET"/>
+        <email-validator:validate-email-id config-ref="EmailValidator__Configuration" emailId="#[message.inboundProperties.'http.query.params'.email]" doc:name="EmailValidator"/>
+    </flow>
+    <flow name="timezoneconectordemoFlow2">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/timezone" doc:name="HTTP" allowedMethods="GET"/>
+        <time-zone:gettimezone config-ref="TimeZone__Configuration" latitude="#[message.inboundProperties.'http.query.params'.latitude]" longitude="#[message.inboundProperties.'http.query.params'.longitude]" doc:name="TimeZone"/>
+    </flow>
+   
+    
+</mule>

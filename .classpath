@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry exported="true" kind="con" path="MULE_RUNTIME/org.mule.tooling.server.3.8.3.ee"/>
+	<classpathentry kind="src" path="src/main/app"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/resources"/>
+	<classpathentry kind="src" path="src/main/api"/>
+	<classpathentry kind="src" path="src/main/wsdl"/>
+	<classpathentry kind="src" path="src/test/munit"/>
+	<classpathentry kind="con" path="MULE_LIB/IndianRailway/org.mule.tooling.ui.contribution.indian-railway.3.5.0"/>
+	<classpathentry kind="con" path="MULE_LIB/EmailValidator/org.mule.tooling.ui.contribution.email-validator.3.5.0"/>
+	<classpathentry kind="con" path="MULE_LIB/TimeZone/org.mule.tooling.ui.contribution.time-zone.3.5.0"/>
+	<classpathentry kind="con" path="MULE_LIB/CurrencyConvertor/org.mule.tooling.ui.contribution.currency-convertor.3.7.0"/>
+	<classpathentry kind="con" path="MULE_LIB/CurrencyConv/org.mule.tooling.ui.contribution.currency-conv.3.5.0"/>
+	<classpathentry kind="con" path="MULE_LIB/CurrConv/org.mule.tooling.ui.contribution.curr-conv.3.5.0"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
